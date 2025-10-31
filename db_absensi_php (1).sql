@@ -36,7 +36,8 @@ CREATE TABLE `absensi` (
   `status_absen` enum('hadir','terlambat','izin','sakit') DEFAULT 'hadir',
   `foto_masuk` varchar(255) DEFAULT NULL,
   `foto_pulang` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+;
 
 --
 -- Dumping data for table `absensi`
@@ -60,7 +61,8 @@ CREATE TABLE `admin` (
   `password` varchar(255) NOT NULL,
   `email` varchar(120) NOT NULL,
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+;
 
 --
 -- Dumping data for table `admin`
@@ -82,7 +84,8 @@ CREATE TABLE `jadwal_karyawan` (
   `jam_masuk` time NOT NULL,
   `jam_pulang` time NOT NULL,
   `toleransi_menit` int NOT NULL DEFAULT '15'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+;
 
 --
 -- Dumping data for table `jadwal_karyawan`
@@ -108,7 +111,8 @@ CREATE TABLE `karyawan` (
   `device_id` varchar(100) DEFAULT NULL,
   `status_aktif` enum('aktif','non-aktif') DEFAULT 'aktif',
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+;
 
 --
 -- Dumping data for table `karyawan`
@@ -135,7 +139,8 @@ CREATE TABLE `karyawan_cred` (
   `id_karyawan` int NOT NULL,
   `username` varchar(60) DEFAULT NULL,
   `password` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+;
 
 --
 -- Dumping data for table `karyawan_cred`
@@ -161,7 +166,8 @@ CREATE TABLE `session_tokens` (
   `id_karyawan` int NOT NULL,
   `token` varchar(128) NOT NULL,
   `expires_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+;
 
 --
 -- Dumping data for table `session_tokens`
@@ -209,7 +215,8 @@ CREATE TABLE `tokens` (
   `token` char(64) NOT NULL,
   `expired_at` datetime NOT NULL,
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+;
 
 --
 -- Dumping data for table `tokens`
